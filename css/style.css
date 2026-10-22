@@ -1,0 +1,161 @@
+:root {
+  --nila: #1b2240;      
+  --nila-tua: #121830;  
+  --emas: #c9a24a;      
+  --gading: #f3ebdd;     
+  --soga: #7a4b2a;       
+
+  --batik: url("../img/batik-corner.png");
+  --batik-ukuran: clamp(120px, 26vw, 260px);
+  --batik-opacity: 0.9;
+
+  --font-judul: "Marcellus", "Times New Roman", serif;
+  --font-isi: "Lora", Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background:
+    linear-gradient(rgba(18, 24, 48, 0.75), rgba(18, 24, 48, 0.85)),
+    url("../img/background.webp") center center / cover no-repeat fixed var(--nila);
+  color: var(--gading);
+  font-family: var(--font-isi);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-judul);
+  font-weight: 400;
+  color: var(--emas);
+}
+h2 { font-size: clamp(1.7rem, 5vw, 2.4rem); margin-bottom: 1.5rem; }
+p { max-width: 60ch; margin-inline: auto; }
+
+.batik {
+  position: fixed;
+  width: var(--batik-ukuran);
+  aspect-ratio: 1;
+  background: var(--batik) no-repeat center / contain;
+  opacity: var(--batik-opacity);
+  pointer-events: none;
+  z-index: 0;
+}
+.batik-kiri-atas  { top: 0;    left: 0; }
+.batik-kanan-atas { top: 0;    right: 0; transform: scaleX(-1); }
+.batik-kiri-bawah { bottom: 0; left: 0;  transform: scaleY(-1); }
+.batik-kanan-bawah{ bottom: 0; right: 0; transform: scale(-1, -1); }
+
+body.terkunci { overflow: hidden; }
+body.terkunci .konten { display: none; }
+
+/* KONTEN */
+main, section { position: relative; z-index: 1; }
+section { padding: 5rem 1.25rem; text-align: center; }
+.panel { background: rgba(18, 24, 48, 0.82); }
+
+/* COVER*/
+.cover {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cover .nama {
+  font-family: var(--font-judul);
+  font-size: clamp(2.6rem, 12vw, 5rem);
+  line-height: 1.1;
+  color: var(--gading);
+  margin: 1rem 0;
+}
+.cover .dan { color: var(--emas); font-size: 0.5em; display: block; }
+.cover .tamu { margin-top: 2rem; margin-bottom: 0.25rem; }
+.cover .tamu strong { color: var(--emas); font-weight: 500; }
+
+.btn-emas {
+  background: var(--emas);
+  color: var(--nila-tua);
+  border: 0;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  font-family: var(--font-judul);
+}
+.btn-emas:hover,
+.btn-emas:focus-visible {
+  background: var(--gading);
+  color: var(--nila-tua); }
+.btn-garis {
+  border: 1px solid var(--emas);
+  color: var(--emas);
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+.btn-garis:hover { background: var(--emas); color: var(--nila-tua); }
+/*MEMPELAI*/
+.foto-mempelai {
+  width: clamp(180px, 24vw, 240px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px double var(--emas);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem;
+  background: var(--nila-tua);
+  box-shadow: 0 0 0 8px rgba(201, 162, 74, 0.15);
+}
+.ampersand { font-family: var(--font-judul); font-size: 2.5rem; color: var(--emas); }
+
+/*ACARA*/
+.kartu-acara {
+  border: 1px solid var(--emas);
+  padding: 2rem 1.25rem;
+  height: 100%;
+}
+.hitung { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
+.hitung div { min-width: 64px; }
+.hitung strong { display: block; font-family: var(--font-judul); font-size: 2rem; color: var(--emas); line-height: 1.1; }
+.hitung span { font-size: 0.85rem; }
+
+/*GALERI*/
+.foto-galeri {
+  background: var(--nila-tua);
+  border: 1px solid rgba(201, 162, 74, 0.4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--emas);
+  font-size: 0.85rem;
+}
+.foto-galeri img { width: 100%; height: 100%; object-fit: cover; }
+
+.galeri-carousel {
+  max-width: 560px;
+  margin: 0 auto;
+  border: 1px solid rgba(201, 162, 74, 0.4);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+}
+.galeri-carousel img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.galeri-carousel .carousel-inner { border-radius: 0.5rem; }
+
+
+.form-rsvp { max-width: 480px; margin: 0 auto; text-align: left; }
+.form-rsvp .form-control, .form-rsvp .form-select {
+  background: var(--nila-tua);
+  color: var(--gading);
+  border: 1px solid rgba(201, 162, 74, 0.5);
+}
+.form-rsvp .form-control:focus, .form-rsvp .form-select:focus {
+  border-color: var(--emas);
+  box-shadow: 0 0 0 0.2rem rgba(201, 162, 74, 0.25);
+}
+.ucapan { max-width: 480px; margin: 2rem auto 0; text-align: left; }
+.ucapan-item { border-left: 2px solid var(--emas); padding: 0.25rem 0 0.25rem 1rem; margin-bottom: 1rem; }
+.ucapan-item small { color: var(--emas); }
+
+footer { position: relative; z-index: 1; text-align: center; padding: 3rem 1rem 4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

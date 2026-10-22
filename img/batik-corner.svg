@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <pattern id="kawung" width="50" height="50" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#C9A24A" stroke-width="1.2">
+        <ellipse cx="25" cy="12" rx="8" ry="12"/>
+        <ellipse cx="25" cy="38" rx="8" ry="12"/>
+        <ellipse cx="12" cy="25" rx="12" ry="8"/>
+        <ellipse cx="38" cy="25" rx="12" ry="8"/>
+      </g>
+      <circle cx="25" cy="25" r="2" fill="#C9A24A"/>
+    </pattern>
+    <clipPath id="sudut">
+      <path d="M0 0H300A300 300 0 0 1 0 300Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#sudut)">
+    <rect width="300" height="300" fill="url(#kawung)"/>
+  </g>
+  <path d="M300 0A300 300 0 0 1 0 300" fill="none" stroke="#C9A24A" stroke-width="3"/>
+  <path d="M262 0A262 262 0 0 1 0 262" fill="none" stroke="#C9A24A" stroke-width="1"/>
+</svg>

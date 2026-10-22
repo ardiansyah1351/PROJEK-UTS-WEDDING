@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>married is scary</title>
+
+  <link href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Marcellus&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="terkunci">
+  <div class="batik batik-kiri-atas" aria-hidden="true"></div>
+  <div class="batik batik-kanan-atas" aria-hidden="true"></div>
+  <div class="batik batik-kiri-bawah" aria-hidden="true"></div>
+  <div class="batik batik-kanan-bawah" aria-hidden="true"></div>
+
+  <main>
+    <section class="cover" id="cover">
+      <p class="mb-0">Wedding Invitation</p>
+      <h1 class="nama">Karina Maudy<span class="dan">dan</span> Aditya Ardians</h1>
+      <p>Sabtu, 11 Desember 2026</p>
+      <p class="tamu">Kepada Yth.<br><strong id="nama-tamu">Nama Tamu</strong></p>
+      <button class="btn btn-emas mt-3" id="btn-buka" type="button">Buka Undangan</button>
+    </section>
+
+    <div class="konten">
+      <section id="mempelai" class="panel">
+        <div class="container">
+          <h2>Mempelai</h2>
+          <p class="mb-5">HARI YANGG BAHAGIA SEMOGA HARIMU PENUH UTANG.</p>
+          <div class="row g-5 align-items-center">
+            <div class="col-md-5">
+              <img class="foto-mempelai" src="1.jpeg" alt="Foto Mempelai Karina Maudy">
+              <h3>Karina Maudy</h3>
+              <p>Putri dari Bapak Ahmad dan Ibu Siti</p>
+            </div>
+            <div class="col-md-2 ampersand">&</div>
+            <div class="col-md-5">
+              <img class="foto-mempelai" src="1.1.jpeg" alt="Foto Mempelai Aditya Ardians">
+              <h3>Aditya Ardians</h3>
+              <p>Putra dari Bapak Samin dan Ibu Lestari</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="acara">
+        <div class="container">
+          <h2>Acara</h2>
+          <div class="hitung" id="hitung" data-tanggal="2026-12-11T10:00:00+07:00">
+            <div><strong id="h-hari">0</strong><span>Hari</span></div>
+            <div><strong id="h-jam">0</strong><span>Jam</span></div>
+            <div><strong id="h-menit">0</strong><span>Menit</span></div>
+            <div><strong id="h-detik">0</strong><span>Detik</span></div>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+              <div class="kartu-acara">
+                <h3>Akad Nikah</h3>
+                <p class="mb-0">Sabtu, 11 Desember 2026<br>Pukul 10.00 WIB</p>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="kartu-acara">
+                <h3>Resepsi</h3>
+                <p class="mb-0">Sabtu, 11 Desember 2026<br>Pukul 12.00 WIB sampai selesai</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt-4">Gedung GRAHA MAHABARATA<br>UNESA Lidah Wetan</p>
+          <a class="btn btn-garis" href="https://maps.app.goo.gl/1Gm4iHjCuZYZhPA76" target="_blank" rel="noopener">Buka Lokasi di Peta</a>
+        </div>
+      </section>
+
+      <section id="galeri" class="panel">
+        <div class="container">
+          <h2>Galeri</h2>
+          <div id="galeri-carousel" class="carousel slide galeri-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#galeri-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#galeri-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#galeri-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded-4">
+              <div class="carousel-item active">
+                <img src="2.jpeg" class="d-block w-100" alt="Foto Galeri 1">
+              </div>
+              <div class="carousel-item">
+                <img src="3.jpeg" class="d-block w-100" alt="Foto Galeri 2">
+              </div>
+              <div class="carousel-item">
+                <img src="4.jpeg" class="d-block w-100" alt="Foto Galeri 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galeri-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Sebelumnya</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galeri-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Berikutnya</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="rsvp">
+        <div class="container">
+          <h2>Konfirmasi Kehadiran</h2>
+          <form class="form-rsvp" id="form-rsvp">
+            <div class="mb-3">
+              <label class="form-label" for="nama">Nama</label>
+              <input class="form-control" id="nama" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="hadir">Kehadiran</label>
+              <select class="form-select" id="hadir">
+                <option>Hadir</option>
+                <option>Tidak hadir</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="pesan">Ucapan atau Kata-kata Hari ini.</label>
+              <textarea class="form-control" id="pesan" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-emas w-100" type="submit">Kirim Ucapan</button>
+          </form>
+          <div class="ucapan" id="daftar-ucapan"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="konten">
+    <p>Semoga Anda hadir dan mengisi amplop yang tebal karna butuh kami uang.</p>
+    <h3>Karina Maudy &amp; Aditya Ardians</h3>
+  </footer>
+  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
